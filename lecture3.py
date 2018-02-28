@@ -150,30 +150,6 @@ plt.xticks(xvals, languages, alpha=0.8)
 #plt.ylabel('% Popularity')
 plt.title('Top 5 Languages for Math & Data \nby % popularity on Stack Overflow', alpha=0.8)
 
-# multiple series bar chart
-popular2 =  [50, 49, 24, 44, 25]
-xvals=np.array(range(len(popular)))
-bar_width=0.3
-plt.figure()
-plt.bar(xvals, popular, width=bar_width, color="b", align ="center")
-plt.bar(xvals+bar_width,popular2,width=bar_width,color='g',align='center')
-
-# single series, multiple color
-my_colors = 'rgbkymc'
-plt.figure()
-plt.bar(xvals, popular, width=bar_width, color=my_colors, align ="center")
-# or direct use the data series
-s = pd.Series(
-    [5, 4, 4, 1, 12],
-    index = ["AK", "AX", "GA", "SQ", "WN"]
-)
-
-plt.figure()
-s.plot(
-    kind='bar',
-    color=my_colors,
-)
-plt.show()
 #TODO: remove all the ticks (both axes), and tick labels on the Y axis
 plt.tick_params(top='off', bottom='off', left='off', right='off', labelleft='off', labelbottom='on')
 
